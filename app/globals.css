@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: #0b0e14;
+}
+
+body {
+  @apply bg-[#0b0e14] text-gray-100 antialiased;
+}
+
+/* esconde scrollbar feia em trilhas horizontais, mantém scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

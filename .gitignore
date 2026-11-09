@@ -1,0 +1,28 @@
+# deps
+node_modules/
+.pnp
+.pnp.js
+
+# next
+.next/
+out/
+build/
+next-env.d.ts
+
+# env — NUNCA comitar segredos
+.env
+.env.local
+.env*.local
+
+# engenharia reversa: contém token/ref REAIS do portal analisado — NÃO publicar
+engenharia-reversa/
+
+# supabase local
+supabase/.branches
+supabase/.temp
+.supabase/
+
+# os
+.DS_Store
+*.log
+Thumbs.db
