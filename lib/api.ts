@@ -9,7 +9,11 @@ import type {
   Conversation,
 } from "./types";
 
-const BASE = process.env.NEXT_PUBLIC_SUPABASE_FUNCTIONS_URL; // ex.: https://<ref>.supabase.co/functions/v1
+const BASE =
+  process.env.NEXT_PUBLIC_SUPABASE_FUNCTIONS_URL ??
+  (process.env.NEXT_PUBLIC_SUPABASE_URL
+    ? `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1`
+    : undefined);
 const ANON = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 function fnUrl(action: string, token: string, params: Record<string, string> = {}) {
